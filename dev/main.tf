@@ -185,6 +185,7 @@ module "pre_signup_lambda_function" {
   outputfilepath = var.filepath[0]
   runtime = var.runtime_name[0]
   handler = "lambda.handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 module "post_confirmation_lambda_function" {
@@ -194,6 +195,7 @@ module "post_confirmation_lambda_function" {
   outputfilepath = var.filepath[1]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   
 }
 
@@ -207,6 +209,7 @@ module "getmatchlist" {
   outputfilepath = var.filepath[2]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -219,6 +222,7 @@ module "getcontestlist" {
   outputfilepath = var.filepath[3]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -231,6 +235,7 @@ module "add_cash" {
   outputfilepath = var.filepath[4]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -243,6 +248,7 @@ module "enter_contest" {
   outputfilepath = var.filepath[5]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -255,6 +261,7 @@ module "my_team" {
   outputfilepath = var.filepath[6]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -267,6 +274,7 @@ module "player_info" {
   outputfilepath = var.filepath[7]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -279,6 +287,7 @@ module "create_team" {
   outputfilepath = var.filepath[8]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -291,6 +300,7 @@ module "leaderboard" {
   outputfilepath = var.filepath[9]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -303,6 +313,7 @@ module "my_contest" {
   outputfilepath = var.filepath[10]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -315,6 +326,7 @@ module "players_list" {
   outputfilepath = var.filepath[11]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -327,6 +339,7 @@ module "wallet_info" {
   outputfilepath = var.filepath[12]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 #_____________________________________________________________________________________
@@ -339,6 +352,7 @@ module "withdraw_cash" {
   outputfilepath = var.filepath[13]
   runtime = var.runtime_name[1]
   handler = "lambda_function.lambda_handler"
+  depends_on = [module.private_rds_sg2, module.subnets]
   //dirname = 
 }
 
